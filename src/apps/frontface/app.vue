@@ -18,6 +18,10 @@ const links = [ {
   label: 'Sample',
   to: '/paper/sample',
   icon: 'i-heroicons-document',
+}, {
+  label: 'Sample w Data',
+  to: '/paper/sampleWithData',
+  icon: 'i-heroicons-document',
 }];
 
 provide('links', links);
