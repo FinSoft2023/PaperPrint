@@ -6,12 +6,12 @@
       <p class="text-center mb-4">บัตรตัวอย่างลายมือชื่อสมาชิก</p>
       <hr class="my-1 border-b-1 border-black">
       <hr class="my-1 border-b-1 border-black">
-      <div class="flex justify-between">
-        <div>
-          <p class="text-center mt-3">ตัวอย่างลายมือชื่อ</p>
+      <div class="flex justify-between text-center">
+        <div class="flex justify-center">
+          <p class="text-center mt-3 ml-50">ตัวอย่างลายมือชื่อ</p>
         </div>
-        <div>
-          <p class="text-center mt-3">วันที่  {{ data?.day }} / {{ data?.month }} / {{ data?.years }}</p>
+        <div class="flex justify-center items-center">
+          <p class="text-center mt-3">วันที่ _ _ _ _ /_ _ _ _ /_ _ _ _</p>
         </div>
       </div>
       
@@ -28,7 +28,7 @@
         <p class="text-center mb-4 ml-19">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ พยาน</p>
         <p class="text-center mb-4 mr-9">(_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)</p>
         <p class="text-center mb-4 ml-19">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ พยาน</p>
-        <p class="text-center mb-4 mr-9">(_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)</p>0819199609
+        <p class="text-center mb-4 mr-9">(_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _)</p>
       </div>
     </div>
   </PaperDoc>
