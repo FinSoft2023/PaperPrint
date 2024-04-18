@@ -27,7 +27,7 @@ function printDoc() {
     display: none;
   }
 
-  #page {
+  .paperDoc {
     margin: 0;
     padding: 0;
     /*
