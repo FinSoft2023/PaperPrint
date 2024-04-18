@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
     Fsignature1: "พิณากร",
     Lsignature1: "ไมตรีจิตต์",
     Fsignature2: "นนทวัช",
-    Lsignature2: "ทันสิงห์",
+    signature2: "ทันสิงห์",
     dateReceived: new Date().toISOString(),
   }
 });
