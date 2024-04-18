@@ -12,7 +12,7 @@
         <p class="text-right mt-5 mb-5">เขียนที่ สหกรณ์ออมทรัพย์โรงพยาบาลศรีสะเกษ จำกัด 
             <br>วันที่......... เดือน...................... พ.ศ..........</p>
         <p>
-            <span class="ml-20">ข้าพเจ้า</span> {{ data?.name }} อายุ {{ data?.age }} ปี ปัจจุบันอาศัยอยู่
+            <span class="ml-20">ข้าพเจ้า</span> <FiLL :data="data?.name" /> อายุ {{ data?.age }} ปี ปัจจุบันอาศัยอยู่
           บ้านเลขที่ {{ data?.homeNo }} หมู่ที่ {{ data?.village }} ตรอก/ซอย {{ data?.alley }} ถนน {{ data?.road }} ตำบล/แขวง {{ data?.district }} 
           อำเภอ/เขต {{ data?.canton }} จังหวัด {{ data?.province }} เบอร์โทร {{ data?.phoneNo }} 
         
