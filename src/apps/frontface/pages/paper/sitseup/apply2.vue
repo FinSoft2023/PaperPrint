@@ -11,7 +11,7 @@
           <p class="text-center mt-3">ตัวอย่างลายมือชื่อ</p>
         </div>
         <div>
-          <p class="text-center mt-3">วันที่ _ _ _ _ /_ _ _ _/ _ _ _ _</p>
+          <p class="text-center mt-3">วันที่ _ _ _ _ /_ _ _ _ /_ _ _ _</p>
         </div>
       </div>
       
