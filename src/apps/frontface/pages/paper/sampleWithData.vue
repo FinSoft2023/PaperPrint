@@ -404,7 +404,7 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useFetch<any>('/api/sampleWithData');
+const { data } = await useFetch<any>('/api/testwithdata');
 // Function to get the formatted string from the Date object in DD/MM/YYYY format
 const formatDate = (date: string) => {
   const formattedDate = new Date(date);
