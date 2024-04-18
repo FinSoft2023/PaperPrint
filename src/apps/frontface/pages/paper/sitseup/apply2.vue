@@ -33,3 +33,13 @@
     </div>
   </PaperDoc>
 </template>
+
+<script setup lang="ts">
+const { data } = await useFetch<any>('/api/sampleWithData');
+// Function to get the formatted string from the Date object in DD/MM/YYYY format
+const formatDate = (date: string) => {
+  const formattedDate = new Date(date);
+  const bcYear = formattedDate.getFullYear() + 543;
+  return formattedDate.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/(\d+)\/(\d+)\/(\d+)/, '$1/$2/' + bcYear);
+}
+</script>
