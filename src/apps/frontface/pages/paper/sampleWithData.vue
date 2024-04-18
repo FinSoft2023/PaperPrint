@@ -4,8 +4,12 @@
       <div class="grid grid-cols-3 justify-center">
         <div class="flex items-start">
           <div class="border-2 border-black p-2">
-            <p>รับที่ {{ data?.receivedLocation }}</p>
-            <p>วันที่ {{ formatDate(data?.dateReceived) }}</p>
+            <p>รับที่
+              <FiLL :data="data?.receivedLocation" />
+            </p>
+            <p>วันที่
+              <FiLL :data="data?.dateReceived" />
+            </p>
           </div>
         </div>
         <div class="flex flex-col items-center">
@@ -17,7 +21,9 @@
         <div class="flex flex-col items-end">
 
           <div class="border-2 border-black p-2">
-            <p>หนังสือกู้ที่ {{ data?.receivedLocation }}</p>
+            <p>หนังสือกู้ที่
+              <FiLL :data="data?.receivedLocation" />
+            </p>
             <p>วันที่.............................................</p>
             <p>บัญชีเงินกู้ที่...............................</p>
           </div>
@@ -405,10 +411,4 @@
 
 <script setup lang="ts">
 const { data } = await useFetch<any>('/api/sampleWithData');
-// Function to get the formatted string from the Date object in DD/MM/YYYY format
-const formatDate = (date: string) => {
-  const formattedDate = new Date(date);
-  const bcYear = formattedDate.getFullYear() + 543;
-  return formattedDate.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/(\d+)\/(\d+)\/(\d+)/, '$1/$2/' + bcYear);
-}
 </script>
