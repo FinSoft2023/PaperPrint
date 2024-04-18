@@ -12,5 +12,6 @@ export default defineEventHandler(async (event) => {
       postcode: "42190",
       tel: "0954320012",
       dateReceived: new Date().toISOString(),
+      
     }
   });
