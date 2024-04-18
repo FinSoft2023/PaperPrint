@@ -4,12 +4,8 @@
       <div class="grid grid-cols-3 justify-center">
         <div class="flex items-start">
           <div class="border-2 border-black p-2">
-            <p>รับที่
-              <FiLL :data="data?.receivedLocation" />
-            </p>
-            <p>วันที่
-              <FiLL :data="data?.dateReceived" />
-            </p>
+            <p>รับที่ {{ data?.receivedLocation }}</p>
+            <p>วันที่ {{ formatDate(data?.dateReceived) }}</p>
           </div>
         </div>
         <div class="flex flex-col items-center">
@@ -21,19 +17,17 @@
         <div class="flex flex-col items-end">
 
           <div class="border-2 border-black p-2">
-            <p>หนังสือกู้ที่
-              <FiLL :data="data?.receivedLocation" />
-            </p>
-            <p>วันที่.............................................</p>
-            <p>บัญชีเงินกู้ที่...............................</p>
+            <p>หนังสือกู้ที่ {{ data?.receivedLocation }}</p>
+            <p>วันที่{{ formatDate(data?.dateReceived) }}</p>
+            <p>บัญชีเงินกู้ที่{{ data?.bankaccount }}</p>
           </div>
         </div>
       </div>
 
       <p class="font-bold text-xl text-center col-span-2">คำขอและหนังสือกู้เงินเพื่อเหตุฉุกเฉิน</p>
       <div class="flex flex-col items-end mt-3">
-        <p>เขียนที่............................................................</p>
-        <p>วันที่............................................................</p>
+        <p>เขียนที่ {{ data?.location }}</p>
+        <p>วันที่ {{ formatDate(data?.dateReceived) }}</p>
       </div>
 
       <div class="flex flex-col mt-1">
@@ -42,28 +36,28 @@
 
       <div class="flex flex-col ml-10">
         <p>
-          ข้าพเจ้า <FiLL :data="data?.fname" /> <FiLL :data="data?.lname" /> สมาชิกเลขทะเบียนที่ <FiLL :data="data?.id" /> 
+          ข้าพเจ้า {{ data?.fname }} {{ data?.lname }}  สมาชิกเลขทะเบียนที่ {{ data?.membernumber }}
         </p>
       </div>
 
       <div class="flex flex-col ">
         <p>
-          รับราชการหรือทำงานประจำในตำแหน่ง......................................................................สังกัด.................................................................
+          รับราชการหรือทำงานประจำในตำแหน่ง {{ data?.position }} สังกัด {{ data?.Affiliation }}
         </p>
-        <p>ได้รับเงินได้รายเดือน <FiLL :data="data?.monthlyIncome" /> บาท
+        <p>ได้รับเงินได้รายเดือน {{ data?.salary }} บาท
           ขอเสนอคำขอกู้เงินเพื่อเหตุฉุกเฉินดังต่อไปนี้
         </p>
       </div>
 
       <div class="flex flex-col ml-10">
         <p>ข้อ ๑. ข้าพเจ้าขอกู้เงินของสหกรณ์
-          จำนวน.......................................................บาท
-          ( <MoneyText :data="data?.monthlyIncome" /> )</p>
+          จำนวน {{ data?.loan }} บาท
+          ({{ data?.loan1 }})</p>
       </div>
 
       <div class="flex flex-col ">
         <p>
-          โดยจะนำไปใช้เพื่อการดังนี้......................................................................................................................................................................
+          โดยจะนำไปใช้เพื่อการดังนี้ {{ data?.takeaway }}
         </p>
       </div>
 
@@ -410,7 +404,7 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useFetch<any>('/api/sampleWithData');
+const { data } = await useFetch<any>('/api/skysuriya');
 // Function to get the formatted string from the Date object in DD/MM/YYYY format
 const formatDate = (date: string) => {
   const formattedDate = new Date(date);
