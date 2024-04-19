@@ -4,7 +4,7 @@
       <div class="flex items-start">
         <div class="border-2 border-black p-2">
           <p>รับที่................................</p>
-          <p>วันที่s........../........../..........</p>
+          <p>วันที่........../........../..........</p>
         </div>
       </div>
       <div class="flex flex-col items-center">
