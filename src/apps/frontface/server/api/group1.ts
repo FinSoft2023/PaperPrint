@@ -16,7 +16,14 @@ export default defineEventHandler(async (event) => {
      position: "อาจารย์",
      department: "มหาลัย",
      salary: 20050,
-
+     stockvalue:1200,
+     office:"ธนาคารออมสิ้น",
+     debt:30000,
+     interest:'24%',
+     guarantee:"รถยนต์",
+     remainingprincipal:15000,
+     accruedinterest:"ไม่มี",
+     reason:"กู้ยืมเงินเพื่อการประกอบอาชีพ",
       dateReceived: new Date().toISOString(),
     }
   });
