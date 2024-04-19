@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
      stockvalue:1200,
      office:"สำนักงานธนาคารออมสิ้น",
      debt:30000,
-     interest:'อัตราต่อปี 24%',
+     interest:'อัตราต่อปี 26%',
      guarantee:"ค้ำประกัน รถยนต์",
      remain:15000,
      accruedinterest:"ไม่มีดอกเบี้ย",

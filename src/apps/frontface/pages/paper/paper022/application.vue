@@ -45,7 +45,11 @@
 ย่อมเป็นการดี
       </p>
       <br>
+<<<<<<< HEAD
       <div class="pl-36">1. <FiLL :data="data?.office" /> <FiLL :data="data?.debt" /> <FiLL :data="data?.interest" /> <FiLL :data="data?.guarantee" /> <FiLL :data="data?.remain" /> <FiLL :data="data?.accruedinterest" /> <FiLL :data="data?.reason" /></div>
+=======
+      <div class="pl-36">1. <FiLL :data="data?.office" /> <FiLL :data="data?.debt" /> <FiLL :data="data?.interest" /> <FiLL :data="data?.guarantee" />  <FiLL :data="data?.remainingprincipal" />  <FiLL :data="data?.accruedinterest" /> <FiLL :data="data?.reason" /></div>
+>>>>>>> cc187e00115e68c73d1c53bc952196f33ac60958
       <p class="pl-36">2. ..........................................................................................................................</p>
       <p class="indent-24">ข้อ 6. ถ้าข้าพเจ้าได้เป็นสมาชิก ข้าพเจ้ามีความประสงค์ขอกู้เงินสหกรณ์ฯ เพื่อชำระหนี้ซึ่ง
 ข้าพเจ้ามีอยู่ดังกล่าวในข้อ 5 นั้น ข้าพเจ้าขอชี้แจงเหตุผลดังต่อไปนี้
