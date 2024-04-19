@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
      department: "การจัดการ",
      salary: 20050,
      stockvalue:1200,
-     office:"ธนาคารออมสิ้น",
+     office:"สำนักงานธนาคารออมสิ้น",
      debt:30000,
      interest:'อัตราต่อปี 24%',
      guarantee:"ค้ำประกัน รถยนต์",
