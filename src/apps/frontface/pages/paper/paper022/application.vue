@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useFetch<any>('/api/group1');
+const { data } = await useFetch<any>('/api/group2');
 // Function to get the formatted string from the Date object in DD/MM/YYYY format
 const formatDate = (date: string) => {
   const formattedDate = new Date(date);
