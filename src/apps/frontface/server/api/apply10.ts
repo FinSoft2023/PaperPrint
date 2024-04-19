@@ -4,7 +4,11 @@ export default defineEventHandler(async (event) => {
       fname: "อัมรินทร์",
       lname: "ศรีอ่อน",
       position:"ลูกจ้างชั่วคราว",
-      Regis_number: "601021",
+      regisNumber: "501021",
+      witnessFname:"สืบสกุล",
+      witnessLname:"สุขสำอางค์",
+      relation: "น้อง",
+      phoneNumber: "0987654321",
       dateReceived: new Date().toISOString(),
       
     }
