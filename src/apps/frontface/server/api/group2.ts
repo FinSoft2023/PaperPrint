@@ -24,6 +24,7 @@ export default defineEventHandler(async (event) => {
      remain:15000,
      accruedinterest:"ไม่มีดอกเบี้ย",
      reason:"กู้ยืมเงินเพื่อการประกอบอาชีพ",
+     mint: "หน้าโง่",
       dateReceived: new Date().toISOString(),
     }
   });
