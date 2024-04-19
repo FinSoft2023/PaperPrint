@@ -1,7 +1,8 @@
 <template>
-  <main>
-    <PaperDoc>
-      <div class="grid grid-cols-3 justify-center">
+    <main>
+      <PaperDoc>
+        <h3>กู้ฉุกเฉินหน้าที่ 1</h3>
+        <div class="grid grid-cols-3 justify-center">
         <div class="flex items-start">
           <div class="border-2 border-black p-2">
             <p>รับที่
@@ -161,9 +162,11 @@
         </div>
 
       </div>
-    </PaperDoc>
-
-    <MorePaperDoc>
+       
+      </PaperDoc>
+  
+      
+      <MorePaperDoc>
       <div class="border-t border-r border-l border-b border-gray-900 p-2">
         <div class="flex justify-center font-bold text-xl mt-2">(สำหรับเจ้าหน้าที่ของสหกรณ์)</div>
         <div class="flex justify-center mt-3">
@@ -387,17 +390,11 @@
       <p class="mt-4 text-right mr-20">
         (....................................................................................)</p>
     </MorePaperDoc>
-  </main>
-</template>
-
-<script setup lang="ts">
-import Index from '../index.vue';
-
-const { data } = await useFetch<any>('/api/sampleWithData');
-// Function to get the formatted string from the Date object in DD/MM/YYYY format
-const formatDate = (date: string) => {
-  const formattedDate = new Date(date);
-  const bcYear = formattedDate.getFullYear() + 543;
-  return formattedDate.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/(\d+)\/(\d+)\/(\d+)/, '$1/$2/' + bcYear);
-}
-</script>
+    </main>
+  </template>
+  
+  <script setup lang="ts">
+  import Index from '../index.vue';
+  
+  const { data } = await useFetch<any>('/api/sampleWithData');
+  </script>
