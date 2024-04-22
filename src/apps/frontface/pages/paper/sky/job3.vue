@@ -23,7 +23,7 @@
 
           <div class="border-2 border-black p-2">
             <p>หนังสือกู้ที่
-              <FiLL :data="data?.receivedLocation" no-line />
+              <FiLL :data="data?.receivedLocation" />
             </p>
             <p>วันที่.............................................</p>
             <p>บัญชีเงินกู้ที่
@@ -54,15 +54,14 @@
           รับราชการหรือทำงานประจำในตำแหน่ง......................................................................สังกัด.................................................................
         </p>
         <p>ได้รับเงินได้รายเดือน
-          <FiLL :data="data?.monthlyIncome" class="min-w-80" /> บาท
+          <FiLL :data="data?.monthlyIncome" /> บาท
           ขอเสนอคำขอกู้เงินเพื่อเหตุฉุกเฉินดังต่อไปนี้
         </p>
       </div>
 
       <div class="flex flex-col ml-10">
-        <p>
-          <FiLLBox />
-          ข้อ ๑. ข้าพเจ้าขอกู้เงินของสหกรณ์ <BlankSpace class="min-w-40" /> บาท
+        <p>ข้อ ๑. ข้าพเจ้าขอกู้เงินของสหกรณ์
+          จำนวน.......................................................บาท
           (
           <MoneyText :data="data?.monthlyIncome" /> )
         </p>
@@ -76,9 +75,7 @@
 
 
       <div class="flex flex-col ml-10">
-        <p>
-          <FiLLBox :checked="data?.monthlyIncome > 500" />
-          ข้อ ๒. ถ้าข้าพเจ้าได้รับเงินกู้ ข้าพเจ้าขอส่งเงินกู้คืน ดังนี้
+        <p>ข้อ ๒. ถ้าข้าพเจ้าได้รับเงินกู้ ข้าพเจ้าขอส่งเงินกู้คืน ดังนี้
         </p>
       </div>
 
@@ -396,5 +393,5 @@
 <script setup lang="ts">
 
 
-const { data } = await useFetch<any>('/api/sampleWithData');
+const { data } = await useFetch<any>('/api/job3');
 </script>

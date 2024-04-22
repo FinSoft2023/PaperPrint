@@ -1,5 +1,7 @@
 <template>
-  <span :class="{ 'font-bold': !normal }">{{ formattedData }}</span>
+  <span :class="{ 'font-bold': !normal, 'border-b-2 border-black border-dotted text-center inline-block': !noLine }">
+    {{ formattedData }}
+  </span>
 </template>
 
 <script setup lang="ts">
@@ -8,6 +10,7 @@ const props = defineProps<{
   asIs?: boolean;
   thaiNumber?: boolean;
   normal?: boolean;
+  noLine?: boolean;
   dateFormat?: "short" | "full";
 }>();
 
