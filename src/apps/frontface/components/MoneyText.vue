@@ -1,5 +1,5 @@
 <template>
-  <span>หนึ่งล้านสามแสนสองหมื่นเจ็ดพันสามร้อยยี่สิบห้าบาท</span>
+  <span>สองหมื่นห้าพันบาทถ้วน</span>
 </template>
 
 <script setup lang="ts">
