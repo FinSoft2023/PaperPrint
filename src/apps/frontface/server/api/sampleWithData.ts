@@ -5,9 +5,10 @@ export default defineEventHandler(async (event) => {
     monthlyIncome: 10000,
     loanAccountNumber: "345/67",
     repaymentPlan: [
-      { m: "Jan", amount: 1000 },
-      { m: "Feb", amount: 1000 },
-      { m: "March", amount: 1000 },
+      { m: "มค", amount: 1000 },
+      { m: "กพ", amount: 1000 },
+      { m: "มน", amount: 1000 },
+      { m: "มษ", amount: 1000 },
     ],
   }
 });
