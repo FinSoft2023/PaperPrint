@@ -2,7 +2,7 @@
     <main>
         <PaperDoc> <!--หน้าที่ 1-->
             <div class="mx-3">
-                <h1 class="text-xl text-center font-semibold mb-2 mt-4 underline">สิทธิหน้าที่สมาชิก</h1>
+                <h1 class="text-xl text-center  mb-2 mt-4 underline">สิทธิหน้าที่สมาชิก</h1>
 
                 <div class="mb-2">
                     <p class="font-semibold mb-1">1.เอกสารที่ต้องใช้ประกอบการสมัครสมาชิกใหม่</p>
@@ -265,16 +265,22 @@
                         หลักประกันที่ให้ไว้ จำนวนต้นเงินคงเหลือ จำนวนดอกเบี้ยค้างชำระและเป็นหนี้สินเพื่อการใดให้ครบทุกรายการ)
                         อย่างน้อยต้องเป็นไปตามอัตราซึ่งกำหนดไว้ในหนังสือขี้ชวน แต่ถ้าจะแสดงความจำนงสูงกว่าอัตราที่กำหนดไว้ก็ย่อมเป็นการดี</p>
                         <p class="pl-36">
-                            1. <FiLL class="min-w-80" :data="`${data?.office}  ${data?.debt} ${data?.annualRate} ${data?.guarantee} ${data?.remain}`"/>
+                            1. <FiLL class="min-w-0" :data="data?.office"/>
                            
                         </p>    
                         <p class="pl-36">
-                            <FiLL class="min-w-80" :data="`${data?.interest} ${data?.reason}`"/>
+                            2. <FiLL class="min-w-0" :data="data?.interest"/>
                         </p>
                         <p>
                             <span class="ml-20">ข้อ 6.</span>ถ้าข้าพเจ้าได้เป็นสมาชิก ข้าพเจ้ามีความประสงค์ขอกู้เงินสหกรณ์ฯ เพื่อชำระหนี้ซึ่งข้าพเจ้ามีอยู่ดังกล่าวในข้อ 5 นั้น ข้าพเจ้าขอขี้แจงเหตุผลตังต่อไปนี้.
                         </p>
-                        <p class="ml-20 break-all flex mt-2 pl-16"><FiLL :data="data?.reason" /></p>
+                        <p class="pl-36">
+                            1. <FiLL class="min-w-0" :data="data?.reason"/>
+                           
+                        </p>    
+                        <p class="pl-36">
+                            2. <FiLL class="min-w-0" :data="data?.reason1"/>
+                        </p>
                         
                         <p class="mt-2">
                             <span class="ml-20">ข้อ 7.</span> ถ้าข้าพเจ้าได้เป็นสมาชิก ข้าพเจ้ายินยอมและขอร้องให้ผู้บังคับบัญชา หรือเจ้าหน้าที่จ่ายเงินได้รายเดือนของข้าพเจ้าเมื่อได้รับมอบหมายจากสหกรณ์ฯ โปรดหักจำนวนเงินค่าหุ้นรายเดือนและ
@@ -303,7 +309,7 @@
                 </div>
             </div>
         </MorePaperDoc>
-        <span v-for="i in 2">
+        <span v-for="i in 3">
         <MorePaperDoc> <!--หน้าที่ 6 & 8-->
             <div class="mx-3">
                 <div class="flex flex-col items-center">
@@ -449,7 +455,7 @@
                             แห่งหนี้และค่าเสียหายตามที่ปรากฏในสัญญากู้ได้เต็มจำนวน ทั้งนี้โดยไม่ต้องบอกกล่าวให้ผู้ยินยอมหรือ
                             ผู้รับผลประโยชน์ทราบล่วงหน้าก่อน
                         </p>
-                        <p class="mt-14 ml-40">
+                        <p class="mt-12 ml-40">
                             <span class="ml-14">
                                 ลงชื่อ<BlankSpace class="min-w-56" />ผู้ให้คำยินยอม (ผู้สมัคร)
                             </span>
@@ -462,7 +468,7 @@
                         </p>
                         <p class="text-center">(<FiLL class="min-w-56" :data="`${data?.fnameInterestedWitness}  ${data?.lnameInterestedWitness}`"/>)</p>
                         <span class="text-center">เกี่ยวข้องเป็น <FiLL :data="data?.relation" class="min-w-20" /></span>
-                        <span class="text-center mb-4">เบอร์โทร <FiLL :data="data?.phoneNo" class="min-w-28" /></span>
+                        <span class="text-center mb-4">เบอร์โทร <FiLL :data="data?.phoneNoRelation" class="min-w-28" /></span>
 
 
                         <span class="mt-8 ml-40">
@@ -490,3 +496,32 @@ import Index from '../index.vue';
 
 const { data } = await useFetch<any>('/api/newMembership');
 </script>
+
+<style scoped>
+@font-face {
+  font-family: "TH Sarabun PSK";
+  src: url("path/to/THSarabunPSK.woff2") format("woff2"),
+    url("path/to/THSarabunPSK.woff") format("woff"),
+    url("path/to/THSarabunPSK.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-font {
+  font-family: "TH Sarabun PSK", Arial, sans-serif;
+  /* เปลี่ยนเป็นฟอนต์ TH Sarabun PSK */
+  font-size: 16px;
+  /* ขนาดฟอนต์พื้นฐาน */
+  line-height: 1.5;
+  /* ระยะห่างบรรทัด */
+}
+
+/* ฟอนต์พิเศษในบางส่วน */
+.font-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+</style>
