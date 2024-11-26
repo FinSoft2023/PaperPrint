@@ -3,6 +3,7 @@
     <UHeader title="Document (paper)">
       <template #right>
         <UButton @click="printDoc">Print</UButton>
+        <UButton @click="printDoc">กลับ</UButton>
       </template>
     </UHeader>
     <UContainer class="bg-gray-400 py-4 print:py-0">
